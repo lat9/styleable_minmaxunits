@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Style-able Min/Max/Units/Mixed</title>
+
+<style type="text/css">
+<!--
+a, a:active, a:visited {
+  color: #006666;
+  text-decoration: none
+}
+a:hover {
+    color:#00CC99;
+    text-decoration: underline;
+}
+BODY, P, H1, H2, H3, H4, H5, H6, LI, TD, DD, DT, table, img, pre {
+  font-family: Verdana, AvantGarde, Tahoma, Arial, sans-serif;
+  font-size: 10pt;
+  color: black;
+  padding: 0px;
+  margin: 20px;
+}
+H1, H2, H3, H4 {
+  font-weight: bold
+}
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 16px;
+  border-top: 1px solid #404040;
+}
+img { float: left; }
+td, th { padding: 5px; text-align: center; }
+ol li {
+  margin-left: 0;
+}
+.corefile {
+  color: red;
+}
+.removed {
+  text-decoration: line-through;
+}
+ol li, ul li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+ul li ul {
+  padding-left: 0;
+}
+.clearBoth { clear: both; }
+-->
+</style>
+</head>
+
+<body>
+<h1>Style-able Min/Max/Units/Mixed</h1>
+<h3>Version 1.0.0 released by lat9</h3>
+<p>Copyright (c) 2013-2014, <a href="http://vinosdefrutastropicales.com">Vinos de Frutas Tropicales</a></p>
+<p>Current Support Thread at Zen Cart Forums: <a href="http://www.zen-cart.com/showthread.php?197992-Reviews-Updated-Support-Thread" target="_blank">http://www.zen-cart.com/showthread.php?197992-Reviews-Updated-Support-Thread</a></p>
+
+<h2>What it does</h2>
+<img src="minmax.png" alt="Zen Cart Demo Min/Max Products" title="Zen Cart Demo Min/Max Products" />
+<p>This plugin makes a slight modification to the core Zen Cart function <code>zen_get_products_quantity_min_units_display</code>, wrapping each of the separate elements with an HTML &lt;span&gt; to allow a product's display to be more customized.</p>
+<p>The image to the left illustrates some of the Zen Cart &quot;demo products&quot; that highlight the min/max/unit/mixed features.  When you view the HTML source generated for the <em>Min and Units NOMIX</em> product, for example, there's nothing to grab as a CSS selector to properly style the output:</p>
+<code>Min:  6 Units:  3&lt;br /&gt;*Mixed OFF</code>
+<p>Once this plugin is installed, the generated HTML includes class-based spans that allow you to separately style each element:</p>
+<code>&lt;span class="qmin"&gt;Min: &nbsp;6&lt;/span&gt;&lt;span class="qunit"&gt; Units: &nbsp;3&lt;/span&gt;&lt;span class="qmix"&gt;&lt;br /&gt;*Mixed OFF&lt;/span&gt;</code>
+<p>Now you're styling! The <em>Max:</em> value uses a class of <code>qmax</code>.</p>
+<div class="clearBoth"></div>
+
+<h2>Installation</h2>
+<p>There is one <span class="corefile">core-file overwrite</span> in this plugin; you should <strong>always</strong> backup your cart's database and files prior to making any changes.</p>
+<ol>
+  <li>Make a backup copy of the plugin's one changed file, then copy the plugin's version of the file:
+  <ol>
+    <li><span class="corefile">/includes/functions/functions_prices.php</span>.  This uses the downwardly-compatible Zen Cart v1.5.3 version of the file as the change basis.</li>
+  </ol></li>
+</ol>
+
+<h2>Un-install</h2>
+<p>Replace the plugin's core-file overwrite with the backup version of the file.</p>
+
+<h2>Version History:</h2>
+<ul>
+  <li>v1.0.0, 2014-10-28, Initial release.</li>
+</ul>
+</body>
+</html>
