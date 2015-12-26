@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Styleable Min/Max/Unit/Mixed Display</title>
 
 <style type="text/css">
@@ -56,13 +57,13 @@ ul li ul {
 
 <body>
 <h1>Styleable Min/Max/Unit/Mixed Display</h1>
-<h3>Version 1.0.0 released by lat9</h3>
-<p>Copyright (c) 2013-2014, <a href="http://vinosdefrutastropicales.com">Vinos de Frutas Tropicales</a></p>
+<h3>Version 1.0.1 released by lat9</h3>
+<p>Copyright (c) 2013-2015, <a href="http://vinosdefrutastropicales.com">Vinos de Frutas Tropicales</a></p>
 <p>Current Support Thread at Zen Cart Forums: <a href="http://www.zen-cart.com/showthread.php?215052-Styleable-Min-Max-Unit-Mixed-Display" target="_blank">http://www.zen-cart.com/showthread.php?215052-Styleable-Min-Max-Unit-Mixed-Display</a></p>
 
 <h2>What it does</h2>
 <img src="minmax.png" alt="Zen Cart Demo Min/Max Products" title="Zen Cart Demo Min/Max Products" />
-<p>This plugin makes a slight modification to the core Zen Cart function <code>zen_get_products_quantity_min_units_display</code>, wrapping each of the separate elements with an HTML &lt;span&gt; to allow a product's display to be more customized.</p>
+<p>This plugin makes a slight modification to the core Zen Cart function <code>zen_get_products_quantity_min_units_display</code>, wrapping each of the separate elements with an HTML &lt;span&gt; to allow a product's display to be more customizable.</p>
 <p>The image to the left illustrates some of the Zen Cart &quot;demo products&quot; that highlight the min/max/unit/mixed features.  When you view the HTML source generated for the <em>Min and Units NOMIX</em> product, for example, there's nothing to grab as a CSS selector to properly style the output:</p>
 <code>Min:  6 Units:  3&lt;br /&gt;*Mixed OFF</code>
 <p>Once this plugin is installed, the generated HTML includes class-based spans that allow you to separately style each element:</p>
@@ -73,9 +74,9 @@ ul li ul {
 <h2>Installation</h2>
 <p>There is one <span class="corefile">core-file overwrite</span> in this plugin; you should <strong>always</strong> backup your cart's database and files prior to making any changes.</p>
 <ol>
-  <li>Make a backup copy of the plugin's one changed file, then copy the plugin's version of the file:
+  <li>Make a backup copy of the plugin's one changed file, then merge any previous changes with the marked changes for this plugin. Finally, copy the file to your store's file-system:
   <ol>
-    <li><span class="corefile">/includes/functions/functions_prices.php</span>.  This uses the downwardly-compatible Zen Cart v1.5.3 version of the file as the change basis.</li>
+    <li><span class="corefile">/includes/functions/functions_prices.php</span>.  This uses the downwardly-compatible Zen Cart v1.5.5 version of the file as the change basis.</li>
   </ol></li>
 </ol>
 
@@ -85,6 +86,9 @@ ul li ul {
 <h2>Version History:</h2>
 <ul>
   <li>v1.0.0, 2014-10-28, Initial release.</li>
+  <li>v1.0.1, 2015-12-26:<ol>
+    <li>CHANGE: Update the <span class="corefile">core-file</span> modification to use Zen Cart v1.5.5 as its change-basis.</li> 
+  </ol></li>
 </ul>
 </body>
 </html>
